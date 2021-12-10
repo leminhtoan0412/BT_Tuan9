@@ -1,0 +1,21 @@
+﻿@model IEnumerable<_0306191183_Buoi2.Models.Product>
+<div class="featured container no-gutter">
+    <div class="row" >
+        @foreach (Product p in Model)
+        { 
+        <div class="item new col-md-4 ">
+            <div class="border-primary">
+                <div class="featured-item">
+                    <img src="~/images/Products/@p.ImagePath" style="width:150px;" alt="">
+                    <h5>@p.Name</h5>
+                    <h6>@p.Price đồng</h6>
+                    <h7>@p.Description</h7>
+                </div>
+
+            </div>
+        </div>
+        }
+
+    </div>
+    
+</div>

@@ -1,0 +1,38 @@
+﻿@model IEnumerable<Account>
+<table class=" table table-hover table-light">
+    <thead class="table-primary">
+        <tr class="text-center">
+            <th>Username</th>
+            <th>Password</th>
+            <th>Phone</th>
+            <th>Birthday</th>
+            <th>Email</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (Account p in Model)
+        {
+        <tr>
+
+            <td class="font-weight-bold"> @p.Username</td>
+            <td class="font-weight-bold"> @p.Password</td>
+            <td class="text-center"> @p.Phone</td>
+            <td class="text-center">@p.Birthday</td>
+            <td class="text-center"> @p.Email</td>
+            <td class="text-center">
+                @if (p.Status == true)
+                {<span class="text-danger">Còn sử dụng</span> }
+                else
+                { <span>Hết sử dụng</span>}
+
+            </td>
+            <td>
+                <button class="btn btn-outline-primary">Sửa</button>
+                <button class="btn btn-outline-danger">Xóa</button>
+            </td>
+        </tr>
+        }
+
+    </tbody>
+</table>
